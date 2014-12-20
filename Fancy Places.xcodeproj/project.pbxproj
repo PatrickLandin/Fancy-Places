@@ -14,6 +14,7 @@
 		ECC717061A44E7F400B6A662 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC717041A44E7F400B6A662 /* LaunchScreen.xib */; };
 		ECC717121A44E7F500B6A662 /* Fancy_PlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC717111A44E7F500B6A662 /* Fancy_PlacesTests.swift */; };
 		ECC7171C1A44E80200B6A662 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7171B1A44E80200B6A662 /* MapKit.framework */; };
+		ECC7171E1A44EED500B6A662 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7171D1A44EED500B6A662 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		ECC717101A44E7F500B6A662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC717111A44E7F500B6A662 /* Fancy_PlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fancy_PlacesTests.swift; sourceTree = "<group>"; };
 		ECC7171B1A44E80200B6A662 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ECC7171D1A44EED500B6A662 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC7171E1A44EED500B6A662 /* CoreLocation.framework in Frameworks */,
 				ECC7171C1A44E80200B6A662 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		ECC716ED1A44E7F400B6A662 = {
 			isa = PBXGroup;
 			children = (
+				ECC7171D1A44EED500B6A662 /* CoreLocation.framework */,
 				ECC7171B1A44E80200B6A662 /* MapKit.framework */,
 				ECC716F81A44E7F400B6A662 /* Fancy Places */,
 				ECC7170E1A44E7F500B6A662 /* Fancy PlacesTests */,
