@@ -12,20 +12,31 @@ import CoreLocation
 
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
-    
+
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    var manager : CLLocationManager!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         
+        // Core Location:
+        
+        self.manager.delegate = self
+        self.manager.desiredAccuracy = kCLLocationAccuracyBest
+        self.manager.requestWhenInUseAuthorization()
+        self.manager.startUpdatingLocation()
+        
+        
+        // Map Data:
+    
         var latitude : CLLocationDegrees = 47.863475
         var longitude : CLLocationDegrees = -122.208951
         
-        var latScreenDelta : CLLocationDegrees = 0.01
-        var longScreenDelta : CLLocationDegrees = 0.01
+        var latScreenDelta : CLLocationDegrees = 0.015
+        var longScreenDelta : CLLocationDegrees = 0.015
         
         var span : MKCoordinateSpan = MKCoordinateSpanMake(latScreenDelta, longScreenDelta)
         var location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
@@ -33,28 +44,54 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         mapView.setRegion(region, animated: true)
         
+        // set location starting location on map
+        
         var annotation = MKPointAnnotation()
-        
         annotation.coordinate = location
-        
         annotation.title = "Fancy House Thing!"
-        
         annotation.subtitle = "2 Christmas trees and 6 dogs"
-        
         mapView.addAnnotation(annotation)
         
-        var lpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        // set starting annotation to map
         
-        lpgr.minimumPressDuration = 2.0;
+        var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        uilpgr.minimumPressDuration = 2.0;
         
-        mapView.addGestureRecognizer(lpgr)
+        mapView.addGestureRecognizer(uilpgr)
         
+        
+    }
+    
+    
+    func action(gestureRecognizer : UIGestureRecognizer) {
+        
+        var touchPoint = gestureRecognizer.locationInView(self.mapView)
+        var newCoordinate : CLLocationCoordinate2D = mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+        
+        var newAnnotation = MKPointAnnotation()
+        newAnnotation.coordinate = newCoordinate
+        newAnnotation.title = "New Point"
+        newAnnotation.subtitle = "One day I'll go here"
+        mapView.addAnnotation(newAnnotation)
+        
+        // allowed for user to create annotation using 2 sec long press
+        
+    }
+    
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        println("locations = \(locations)")
+    }
+    
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        print("error")
     }
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>12D7CD84-B52C-4FBF-9BCA-5385E72ECB16</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Fancy Places</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9169C203F99E951AFF9AF4A0020B4164C4D8F948</key>
+		<string>https://github.com/PatrickLandin/Fancy-Places.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fancy Places.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9169C203F99E951AFF9AF4A0020B4164C4D8F948</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/PatrickLandin/Fancy-Places.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9169C203F99E951AFF9AF4A0020B4164C4D8F948</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9169C203F99E951AFF9AF4A0020B4164C4D8F948</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Fancy%20Places</string>
+		</dict>
+	</array>
+</dict>
+</plist>
